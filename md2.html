@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành CSS Box Model 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Khối div bên ngoài (hình tròn lớn) */
+        div {
+            margin: auto;                        /* Căn giữa khối div theo chiều ngang */
+            padding: 35px;                       /* Khoảng đệm xung quanh thẻ div con */
+            width: 80px;                         /* Chiều rộng vùng nội dung */
+            box-shadow: inset 0 0 22px indianred;/* Đổ bóng phía trong ô (màu đỏ dâu) */
+            border-radius: 50%;                  /* Bo tròn 50% biến khối div thành hình tròn */
+        }
+
+        /* Khối div con nằm bên trong (hình chữ nhật bo góc nhỏ) */
+        div > div {
+            padding: 0 0px 100px 0px;            /* Tăng chiều cao của khối con bằng padding-bottom */
+            border-radius: 3%;                   /* Bo nhẹ góc 3% */
+            box-shadow: inset 0 0 22px seagreen; /* Đổ bóng phía trong ô (màu xanh lá) */
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center;">Mô phỏng hình khối bằng CSS Box Model</h2>
+
+    <!-- Khối cha -->
+    <div>
+        <!-- Khối con -->
+        <div></div>
+    </div>
+
+</body>
+</html>
