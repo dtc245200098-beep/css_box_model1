@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành CSS Box Model 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Khối bao ngoài dùng Flexbox để xếp 2 khối con nằm ngang */
+        #demo {
+            width: 350px;
+            display: flex;
+            float: left;
+            border: 6px solid black;
+            border-radius: 6%;
+            padding: 20px;
+        }
+
+        /* Khối con d1: không có padding */
+        .d1 {
+            margin-left: 20px;
+            width: 150px;
+            height: 80px;
+            box-shadow: 0 0 0 4px mediumslateblue;
+            box-sizing: border-box; /* Giữ cố định tổng kích thước */
+            border-radius: 36%;
+        }
+
+        /* Khối con d2: có padding 30px */
+        .d2 {
+            width: 150px;
+            height: 80px;
+            padding: 30px;
+            box-shadow: 0 0 0 4px darkred;
+            box-sizing: border-box; /* Giữ cố định tổng kích thước dù có padding */
+            border-radius: 36%;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Thực hành Box Model với thuộc tính box-sizing: border-box</h2>
+
+    <div id="demo">
+        <div class="d1"></div>
+        <div class="d2"></div>
+    </div>
+
+</body>
+</html>
